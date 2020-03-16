@@ -16,7 +16,12 @@ _global_script_class_icons={
 [application]
 
 config/name="Week 140 Shapeshift"
+run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+DialogManager="*res://DialogManager.gd"
 
 [display]
 

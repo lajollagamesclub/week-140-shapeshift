@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Body_Jacked_Arms.png-5a5f484d4d3ca90e9aec6c645e7c245a.stex"
+path="res://.import/Body_Buff.png-230f40fd9bc35379d63d5443e9c975b3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Body_Jacked_Arms.png"
-dest_files=[ "res://.import/Body_Jacked_Arms.png-5a5f484d4d3ca90e9aec6c645e7c245a.stex" ]
+source_file="res://bodies/Body_Buff.png"
+dest_files=[ "res://.import/Body_Buff.png-230f40fd9bc35379d63d5443e9c975b3.stex" ]
 
 [params]
 

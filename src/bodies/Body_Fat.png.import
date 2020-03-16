@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Head_Normal.png-6d850a179b3b7731aa49e7695b81af0f.stex"
+path="res://.import/Body_Fat.png-12c353120bbf0d5117f050fbf608acc1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Head_Normal.png"
-dest_files=[ "res://.import/Head_Normal.png-6d850a179b3b7731aa49e7695b81af0f.stex" ]
+source_file="res://bodies/Body_Fat.png"
+dest_files=[ "res://.import/Body_Fat.png-12c353120bbf0d5117f050fbf608acc1.stex" ]
 
 [params]
 

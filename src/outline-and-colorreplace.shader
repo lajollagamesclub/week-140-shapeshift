@@ -45,11 +45,11 @@ void fragment()
 			for(int y = -1; y <= 1; y += 1){
 				if (x==0 && y==0)
 					continue;
-				if (abs(x) == 1 && abs(y) == 1) // ignore diagonals
+				if ((x == 1 || x == -1) && (y == 1 || y == -1)) // ignore diagonals
 					continue;
 					
 				vec2 outline_uv = regular_uv + vec2(float(x) * ps.x, float(y) * ps.y); 
-				
+				//
 				//Sample here, if we are out of bounds then fail
 				vec4 outline_sample = texture(TEXTURE, outline_uv);
 				if((outline_uv.x < 0.0 || outline_uv.x > 1.0) || (outline_uv.y < 0.0 || outline_uv.y > 1.0)){

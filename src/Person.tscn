@@ -1,19 +1,21 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Body_Jacked_Arms.png" type="Texture" id=1]
+[ext_resource path="res://bodies/Body_Normal.png" type="Texture" id=1]
 [ext_resource path="res://outline-and-colorreplace.shader" type="Shader" id=2]
-[ext_resource path="res://Head_Normal.png" type="Texture" id=3]
+[ext_resource path="res://heads/Head_Anime.png" type="Texture" id=3]
+[ext_resource path="res://Person.gd" type="Script" id=4]
 
-[sub_resource type="ShaderMaterial" id=2]
+[sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 2 )
 shader_param/intensity = 50
 shader_param/precision = 0.02
 shader_param/outline_color = null
 
-[sub_resource type="ViewportTexture" id=1]
+[sub_resource type="ViewportTexture" id=2]
 viewport_path = NodePath("Composite")
 
 [node name="Person" type="Node2D"]
+script = ExtResource( 4 )
 
 [node name="Composite" type="Viewport" parent="."]
 size = Vector2( 1920, 1080 )
@@ -23,14 +25,24 @@ render_target_v_flip = true
 [node name="PersonSprites" type="Node2D" parent="Composite"]
 position = Vector2( 960, 540 )
 
-[node name="TestingSprite" type="Sprite" parent="Composite/PersonSprites"]
-texture = ExtResource( 1 )
-
-[node name="TestingHead" type="Sprite" parent="Composite/PersonSprites"]
+[node name="TestingHeadBg" type="Sprite" parent="Composite/PersonSprites"]
 texture = ExtResource( 3 )
-offset = Vector2( 0, -15.566 )
+offset = Vector2( 0.04, -25.17 )
+region_enabled = true
+region_rect = Rect2( 1.487, 17.917, 15.678, 7.566 )
+
+[node name="TestingBody" type="Sprite" parent="Composite/PersonSprites"]
+texture = ExtResource( 1 )
+offset = Vector2( 0, -16 )
+
+[node name="TestingHeadFg" type="Sprite" parent="Composite/PersonSprites"]
+texture = ExtResource( 3 )
+offset = Vector2( 0.632, -38.169 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 18.6574, 18.1318 )
 
 [node name="TestingBackground" type="ColorRect" parent="."]
+visible = false
 margin_left = -26.0
 margin_top = -28.0
 margin_right = 32.0
@@ -40,5 +52,6 @@ __meta__ = {
 }
 
 [node name="CompositeSprite" type="Sprite" parent="."]
-material = SubResource( 2 )
-texture = SubResource( 1 )
+material = SubResource( 1 )
+scale = Vector2( 7, 7 )
+texture = SubResource( 2 )
